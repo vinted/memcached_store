@@ -36,11 +36,11 @@ jobs:
       - name: Test
         run: bundle exec rake
 
-#      - name: Build
-#        id: build
-#        if: success() && github.ref == 'refs/heads/master'
-#        run: |
-#          bundle exec rake build
+      - name: Build
+        id: build
+        if: success()
+        run: |
+          gem build memcached_store.gemspec
 
 #      - name: Release
 #        if: success() && github.ref == 'refs/heads/master'
