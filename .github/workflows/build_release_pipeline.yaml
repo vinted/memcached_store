@@ -19,6 +19,12 @@ jobs:
 
     name: ${{ matrix.entry.name }}
 
+    services:
+      memcached:
+        image: memcached
+        ports:
+          - 11211:11211
+
     steps:
       - run: sudo apt-get -y install libsasl2-dev
       - uses: actions/checkout@v2
