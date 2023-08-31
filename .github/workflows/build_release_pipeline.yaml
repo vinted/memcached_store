@@ -20,6 +20,7 @@ jobs:
     name: ${{ matrix.entry.name }}
 
     steps:
+      - run: sudo apt-get -y install libsasl2-dev
       - uses: actions/checkout@v2
       - uses: ruby/setup-ruby@v1
         with:
