@@ -19,3 +19,7 @@ task tag: :build do
   system "git tag -a v#{MemcachedStore::VERSION} -m 'Tagging #{MemcachedStore::VERSION}'"
   system "git push --tags"
 end
+
+task :version do |t|
+  puts MemcachedStore::VERSION
+end
